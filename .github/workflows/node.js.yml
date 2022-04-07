@@ -33,4 +33,4 @@ jobs:
     - name: Deploy to AWS
       run: npm run deploy -- --stage test --region eu-central-1
       env:
-        AMAZON_ACCESS_KEY_ID: ${{ AMAZON_ACCESS_KEY_ID }}
+        AMAZON_ACCESS_KEY_ID: ${{ secrets.AMAZON_ACCESS_KEY_ID }}
