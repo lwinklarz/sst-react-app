@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 env:
-  AMAZON_ACCESS_KEY_ID: ${{ env.AMAZON_ACCESS_KEY_ID }}
+  AMAZON_ACCESS_KEY_ID: ${{ AMAZON_ACCESS_KEY_ID }}
 
 jobs:
   build:
