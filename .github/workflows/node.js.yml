@@ -9,9 +9,6 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
-  AMAZON_ACCESS_KEY_ID: ${{ AMAZON_ACCESS_KEY_ID }}
-
 jobs:
   build:
 
@@ -34,3 +31,5 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - run: npm run deploy -- --stage test --region eu-central-1
+      with:
+        AMAZON_ACCESS_KEY_ID: ${{ env.AMAZON_ACCESS_KEY_ID }}
